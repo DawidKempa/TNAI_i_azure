@@ -1,0 +1,44 @@
+﻿@model List<LibrarySystem.Core.Models.Loan>
+
+@{
+    ViewData["Title"] = "Wypożyczenia";
+}
+
+<h1>Lista wypożyczeń</h1>
+
+<p>
+    <a asp-action="Create" class="btn btn-primary">Nowe wypożyczenie</a>
+</p>
+
+<table class="table">
+    <thead>
+    <tr>
+        <th>Książka</th>
+        <th>Czytelnik</th>
+        <th>Data wypożyczenia</th>
+        <th>Termin zwrotu</th>
+        <th>Data zwrotu</th>
+        <th>Akcje</th>
+    </tr>
+    </thead>
+    <tbody>
+    @foreach (var loan in Model)
+    {
+        <tr>
+            <td>@loan.Book.Title</td>
+            <td>@loan.Reader.FirstName @loan.Reader.LastName</td>
+            <td>@loan.LoanDate.ToShortDateString()</td>
+            <td>@loan.DueDate.ToShortDateString()</td>
+            <td>@(loan.ReturnDate?.ToShortDateString() ?? "-")</td>
+            <td>
+                @if (loan.ReturnDate == null)
+                {
+                    <form asp-action="Return" asp-route-id="@loan.Id" method="post" style="display:inline;">
+                        <button type="submit" class="btn btn-sm btn-success">Zwróć</button>
+                    </form>
+                }
+            </td>
+        </tr>
+    }
+    </tbody>
+</table>

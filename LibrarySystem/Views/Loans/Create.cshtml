@@ -1,0 +1,18 @@
+﻿@{
+    ViewData["Title"] = "Nowe wypożyczenie";
+}
+
+<h1>Nowe wypożyczenie</h1>
+
+<form asp-action="Create" method="post">
+    <div class="form-group">
+        <label>Książka</label>
+        <select name="bookId" class="form-control" asp-items="ViewBag.Books"></select>
+    </div>
+    <div class="form-group">
+        <label>Czytelnik</label>
+        <select name="readerId" class="form-control" asp-items="ViewBag.Readers"></select>
+    </div>
+    <button type="submit" class="btn btn-primary">Wypożycz</button>
+    <a asp-action="Index" class="btn btn-secondary">Anuluj</a>
+</form>

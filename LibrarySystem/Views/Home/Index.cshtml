@@ -1,0 +1,29 @@
+﻿@{
+    ViewData["Title"] = "Strona główna";
+}
+
+<div class="text-center">
+    <h1 class="display-4">System Biblioteczny</h1>
+    <p>Prosty system do zarządzania biblioteką</p>
+    
+    <div class="row mt-4">
+        <div class="col-md-4">
+            <div class="card">
+                <div class="card-body">
+                    <h5 class="card-title">Książki</h5>
+                    <p class="card-text">Zarządzaj katalogiem książek</p>
+                    <a asp-controller="Books" asp-action="Index" class="btn btn-primary">Przejdź</a>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-4">
+            <div class="card">
+                <div class="card-body">
+                    <h5 class="card-title">Wypożyczenia</h5>
+                    <p class="card-text">Zarządzaj wypożyczeniami</p>
+                    <a asp-controller="Loans" asp-action="Index" class="btn btn-primary">Przejdź</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,28 @@
+﻿@model LibrarySystem.Core.Models.Book
+
+@{
+    ViewData["Title"] = "Usuń książkę";
+}
+
+<h1>Czy na pewno chcesz usunąć tę książkę?</h1>
+
+<div>
+    <h4>@Model.Title</h4>
+    <hr />
+    <dl class="row">
+        <dt class="col-sm-2">Autor</dt>
+        <dd class="col-sm-10">@Model.Author</dd>
+        
+        <dt class="col-sm-2">ISBN</dt>
+        <dd class="col-sm-10">@Model.ISBN</dd>
+        
+        <dt class="col-sm-2">Rok</dt>
+        <dd class="col-sm-10">@Model.Year</dd>
+    </dl>
+    
+    <form asp-action="Delete">
+        <input type="hidden" asp-for="Id" />
+        <button type="submit" class="btn btn-danger">Usuń</button>
+        <a asp-action="Index" class="btn btn-secondary">Anuluj</a>
+    </form>
+</div>

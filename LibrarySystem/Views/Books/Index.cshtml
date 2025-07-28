@@ -1,0 +1,41 @@
+﻿@model List<LibrarySystem.Core.Models.Book>
+
+@{
+    ViewData["Title"] = "Książki";
+}
+
+<h1>Lista książek</h1>
+
+<p>
+    <a asp-action="Create" class="btn btn-primary">Dodaj nową książkę</a>
+</p>
+
+<table class="table">
+    <thead>
+    <tr>
+        <th>Tytuł</th>
+        <th>Autor</th>
+        <th>ISBN</th>
+        <th>Rok</th>
+        <th>Dostępna</th>
+        <th>Akcje</th>
+    </tr>
+    </thead>
+    <tbody>
+    @foreach (var book in Model)
+    {
+        <tr>
+            <td>@book.Title</td>
+            <td>@book.Author</td>
+            <td>@book.ISBN</td>
+            <td>@book.Year</td>
+            <td>@(book.IsAvailable ? "Tak" : "Nie")</td>
+            <td>
+                <a asp-action="Details" asp-route-id="@book.Id" class="btn btn-sm btn-info">Szczegóły</a>
+                <a asp-action="Edit" asp-route-id="@book.Id" class="btn btn-sm btn-warning">Edytuj</a>
+                <a asp-action="Delete" asp-route-id="@book.Id" class="btn btn-sm btn-danger">Usuń</a>
+            </td>
+        </tr>
+    }
+    </tbody>
+</table>
