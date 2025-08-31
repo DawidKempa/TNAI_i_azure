@@ -8,24 +8,31 @@
     "net9.0": []
   },
   "packageFolders": {
-    "/Users/kowal/.nuget/packages/": {}
+    "C:\\Users\\Dawid Kempa\\.nuget\\packages\\": {},
+    "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "/Users/kowal/Desktop/LibrarySystem/LibrarySystem.Core/LibrarySystem.Core.csproj",
+      "projectUniqueName": "D:\\TNAI\\LibrarySystem.Core\\LibrarySystem.Core.csproj",
       "projectName": "LibrarySystem.Core",
-      "projectPath": "/Users/kowal/Desktop/LibrarySystem/LibrarySystem.Core/LibrarySystem.Core.csproj",
-      "packagesPath": "/Users/kowal/.nuget/packages/",
-      "outputPath": "/Users/kowal/Desktop/LibrarySystem/LibrarySystem.Core/obj/",
+      "projectPath": "D:\\TNAI\\LibrarySystem.Core\\LibrarySystem.Core.csproj",
+      "packagesPath": "C:\\Users\\Dawid Kempa\\.nuget\\packages\\",
+      "outputPath": "D:\\TNAI\\LibrarySystem.Core\\obj\\",
       "projectStyle": "PackageReference",
+      "fallbackFolders": [
+        "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
+      ],
       "configFilePaths": [
-        "/Users/kowal/.nuget/NuGet/NuGet.Config"
+        "C:\\Users\\Dawid Kempa\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
         "net9.0"
       ],
       "sources": {
+        "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
         "https://api.nuget.org/v3/index.json": {}
       },
       "frameworks": {
@@ -65,7 +72,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "/usr/local/share/dotnet/sdk/9.0.303/PortableRuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.304/PortableRuntimeIdentifierGraph.json"
       }
     }
   }

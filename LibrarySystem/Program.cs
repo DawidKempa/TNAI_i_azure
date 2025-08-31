@@ -20,6 +20,7 @@ builder.Services.AddScoped<IUserRepository, UserRepository>();
 builder.Services.AddScoped<BookService>();
 builder.Services.AddScoped<LoanService>();
 builder.Services.AddScoped<AuthService>();
+builder.Services.AddScoped<ReaderService>();
 
 builder.Services.AddAuthentication(CookieAuthenticationDefaults.AuthenticationScheme)
     .AddCookie(options =>

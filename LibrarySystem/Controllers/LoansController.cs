@@ -30,7 +30,7 @@ namespace LibrarySystem.Controllers
         public IActionResult Create()
         {
             ViewBag.Books = new SelectList(_bookService.GetAvailableBooks(), "Id", "Title");
-            ViewBag.Readers = new SelectList(_readerRepository.GetAll(), "Id", "LastName");
+            ViewBag.Readers = new SelectList(_readerRepository.GetAll(), "Id", "FullName");
             return View();
         }
 

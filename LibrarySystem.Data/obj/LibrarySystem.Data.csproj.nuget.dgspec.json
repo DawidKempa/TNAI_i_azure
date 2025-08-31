@@ -1,25 +1,31 @@
 {
   "format": 1,
   "restore": {
-    "/Users/kowal/Desktop/LibrarySystem/LibrarySystem.Data/LibrarySystem.Data.csproj": {}
+    "D:\\TNAI\\LibrarySystem.Data\\LibrarySystem.Data.csproj": {}
   },
   "projects": {
-    "/Users/kowal/Desktop/LibrarySystem/LibrarySystem.Core/LibrarySystem.Core.csproj": {
+    "D:\\TNAI\\LibrarySystem.Core\\LibrarySystem.Core.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "/Users/kowal/Desktop/LibrarySystem/LibrarySystem.Core/LibrarySystem.Core.csproj",
+        "projectUniqueName": "D:\\TNAI\\LibrarySystem.Core\\LibrarySystem.Core.csproj",
         "projectName": "LibrarySystem.Core",
-        "projectPath": "/Users/kowal/Desktop/LibrarySystem/LibrarySystem.Core/LibrarySystem.Core.csproj",
-        "packagesPath": "/Users/kowal/.nuget/packages/",
-        "outputPath": "/Users/kowal/Desktop/LibrarySystem/LibrarySystem.Core/obj/",
+        "projectPath": "D:\\TNAI\\LibrarySystem.Core\\LibrarySystem.Core.csproj",
+        "packagesPath": "C:\\Users\\Dawid Kempa\\.nuget\\packages\\",
+        "outputPath": "D:\\TNAI\\LibrarySystem.Core\\obj\\",
         "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
+        ],
         "configFilePaths": [
-          "/Users/kowal/.nuget/NuGet/NuGet.Config"
+          "C:\\Users\\Dawid Kempa\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
           "net9.0"
         ],
         "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
@@ -59,34 +65,40 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "/usr/local/share/dotnet/sdk/9.0.303/PortableRuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.304/PortableRuntimeIdentifierGraph.json"
         }
       }
     },
-    "/Users/kowal/Desktop/LibrarySystem/LibrarySystem.Data/LibrarySystem.Data.csproj": {
+    "D:\\TNAI\\LibrarySystem.Data\\LibrarySystem.Data.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "/Users/kowal/Desktop/LibrarySystem/LibrarySystem.Data/LibrarySystem.Data.csproj",
+        "projectUniqueName": "D:\\TNAI\\LibrarySystem.Data\\LibrarySystem.Data.csproj",
         "projectName": "LibrarySystem.Data",
-        "projectPath": "/Users/kowal/Desktop/LibrarySystem/LibrarySystem.Data/LibrarySystem.Data.csproj",
-        "packagesPath": "/Users/kowal/.nuget/packages/",
-        "outputPath": "/Users/kowal/Desktop/LibrarySystem/LibrarySystem.Data/obj/",
+        "projectPath": "D:\\TNAI\\LibrarySystem.Data\\LibrarySystem.Data.csproj",
+        "packagesPath": "C:\\Users\\Dawid Kempa\\.nuget\\packages\\",
+        "outputPath": "D:\\TNAI\\LibrarySystem.Data\\obj\\",
         "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
+        ],
         "configFilePaths": [
-          "/Users/kowal/.nuget/NuGet/NuGet.Config"
+          "C:\\Users\\Dawid Kempa\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
           "net9.0"
         ],
         "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
           "net9.0": {
             "targetAlias": "net9.0",
             "projectReferences": {
-              "/Users/kowal/Desktop/LibrarySystem/LibrarySystem.Core/LibrarySystem.Core.csproj": {
-                "projectPath": "/Users/kowal/Desktop/LibrarySystem/LibrarySystem.Core/LibrarySystem.Core.csproj"
+              "D:\\TNAI\\LibrarySystem.Core\\LibrarySystem.Core.csproj": {
+                "projectPath": "D:\\TNAI\\LibrarySystem.Core\\LibrarySystem.Core.csproj"
               }
             }
           }
@@ -109,13 +121,13 @@
           "dependencies": {
             "Microsoft.EntityFrameworkCore": {
               "target": "Package",
-              "version": "[9.0.7, )"
+              "version": "[9.0.8, )"
             },
             "Microsoft.EntityFrameworkCore.Design": {
               "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
               "suppressParent": "All",
               "target": "Package",
-              "version": "[9.0.7, )"
+              "version": "[9.0.8, )"
             },
             "Microsoft.EntityFrameworkCore.SqlServer": {
               "target": "Package",
@@ -142,7 +154,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "/usr/local/share/dotnet/sdk/9.0.303/PortableRuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.304/PortableRuntimeIdentifierGraph.json"
         }
       }
     }

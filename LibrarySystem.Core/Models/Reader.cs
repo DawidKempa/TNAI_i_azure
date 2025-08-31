@@ -7,5 +7,7 @@
         public string LastName { get; set; }
         public string Email { get; set; }
         public string CardNumber { get; set; }
+
+        public string FullName => $"{FirstName} {LastName}";
     }
 }
