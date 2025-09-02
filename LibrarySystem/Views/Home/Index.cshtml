@@ -3,36 +3,78 @@
 }
 
 <div class="text-center">
-    <h1 class="display-4">System Biblioteczny</h1>
-    <p>Prosty system do zarządzania biblioteką</p>
+    <h1 class="display-4 mb-4">System Biblioteczny</h1>
+    <p class="lead mb-4">System do zarządzania biblioteką</p>
     
-    <div class="row mt-4">
-        <div class="col-md-4">
-            <div class="card">
+    <div class="mb-5">
+        @if (User.Identity.IsAuthenticated)
+        {
+            <div class="alert alert-success">
+                <h4>Witaj, @User.Identity.Name!</h4>
+                <p>Jesteś zalogowany i możesz korzystać z systemu.</p>
+            </div>
+        }
+        else
+        {
+            <div class="card mx-auto" style="max-width: 400px;">
+                <div class="card-header">
+                    <h5 class="mb-0">Zaloguj się aby rozpocząć</h5>
+                </div>
                 <div class="card-body">
-                    <h5 class="card-title">Książki</h5>
-                    <p class="card-text">Zarządzaj katalogiem książek</p>
-                    <a asp-controller="Books" asp-action="Index" class="btn btn-primary">Przejdź</a>
+                    <p class="card-text mb-3">Aby korzystać z systemu bibliotecznego, musisz się zalogować.</p>
+                    <a asp-controller="Account" asp-action="Login" class="btn btn-primary btn-lg">
+                        <i class="fas fa-sign-in-alt me-2"></i>Zaloguj się
+                    </a>
+                    <div class="mt-3">
+                        <small class="text-muted">
+                            Nie masz konta? 
+                            <a asp-controller="Account" asp-action="Register">Zarejestruj się</a>
+                        </small>
+                    </div>
                 </div>
             </div>
-        </div>
-        <div class="col-md-4">
-            <div class="card">
-                <div class="card-body">
-                    <h5 class="card-title">Wypożyczenia</h5>
-                    <p class="card-text">Zarządzaj wypożyczeniami</p>
-                    <a asp-controller="Loans" asp-action="Index" class="btn btn-primary">Przejdź</a>
-                </div>
-            </div>
-        </div>
-        <div class="col-md-4">
-            <div class="card">
-                <div class="card-body">
-                    <h5 class="card-title">Czytelnicy</h5>
-                    <p class="card-text">Zarządzaj czytelnikami</p>
-                    <a asp-controller="Readers" asp-action="Index" class="btn btn-primary">Przejdź</a>
-                </div>
-            </div>
-        </div>
+        }
     </div>
+
+    @if (User.Identity.IsAuthenticated)
+    {
+        <div class="row">
+            <div class="col-md-4 mb-4">
+                <div class="card h-100">
+                    <div class="card-body">
+                        <div class="text-center mb-3">
+                            <i class="fas fa-book fa-3x text-primary"></i>
+                        </div>
+                        <h5 class="card-title">Książki</h5>
+                        <p class="card-text">Zarządzaj katalogiem książek, dodawaj nowe pozycje i edytuj istniejące.</p>
+                        <a asp-controller="Books" asp-action="Index" class="btn btn-primary">Przejdź do książek</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4 mb-4">
+                <div class="card h-100">
+                    <div class="card-body">
+                        <div class="text-center mb-3">
+                            <i class="fas fa-handshake fa-3x text-success"></i>
+                        </div>
+                        <h5 class="card-title">Wypożyczenia</h5>
+                        <p class="card-text">Zarządzaj wypożyczeniami książek, śledź terminy zwrotów.</p>
+                        <a asp-controller="Loans" asp-action="Index" class="btn btn-success">Przejdź do wypożyczeń</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4 mb-4">
+                <div class="card h-100">
+                    <div class="card-body">
+                        <div class="text-center mb-3">
+                            <i class="fas fa-users fa-3x text-info"></i>
+                        </div>
+                        <h5 class="card-title">Czytelnicy</h5>
+                        <p class="card-text">Zarządzaj bazą czytelników, dodawaj nowych użytkowników.</p>
+                        <a asp-controller="Readers" asp-action="Index" class="btn btn-info">Przejdź do czytelników</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    }
 </div>
