@@ -35,7 +35,6 @@ namespace LibrarySystem.Services
                 PasswordHash = HashPassword(password),
                 FirstName = firstName,
                 LastName = lastName,
-                RegisterDate = DateTime.UtcNow
             };
 
             _userRepository.Add(user);
