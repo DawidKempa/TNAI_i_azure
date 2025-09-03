@@ -29,5 +29,14 @@ namespace LibrarySystem.Core.Models
         [Display(Name = "Nazwisko")]
         [Column("LastName")]
         public string LastName { get; set; }
+        
+        [Column("RegisterDate")]
+        public DateTime RegisterDate { get; set; }
+        
+        [Column("IsActive")]
+        public bool IsActive { get; set; } = true;
+        
+        [Column("Role")]
+        public string Role { get; set; } = "User";
     }
 }

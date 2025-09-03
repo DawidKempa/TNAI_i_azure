@@ -28,7 +28,7 @@ namespace LibrarySystem.Controllers
         {
             if (!ModelState.IsValid)
                 return View(model);
-
+            
             var user = _authService.Authenticate(model.Email, model.Password);
             if (user == null)
             {
@@ -41,13 +41,13 @@ namespace LibrarySystem.Controllers
                 new Claim(ClaimTypes.NameIdentifier, user.Id.ToString()),
                 new Claim(ClaimTypes.Email, user.Email),
                 new Claim(ClaimTypes.Name, $"{user.FirstName} {user.LastName}"),
+                new Claim(ClaimTypes.Role, user.Role)
             };
 
             var identity = new ClaimsIdentity(claims, CookieAuthenticationDefaults.AuthenticationScheme);
             var principal = new ClaimsPrincipal(identity);
 
             await HttpContext.SignInAsync(CookieAuthenticationDefaults.AuthenticationScheme, principal);
-
             return RedirectToAction("Index", "Home");
         }
 
@@ -69,12 +69,12 @@ namespace LibrarySystem.Controllers
                 return View(model);
             }
 
-            // Automatyczne logowanie po rejestracji
             var claims = new List<Claim>
             {
                 new Claim(ClaimTypes.NameIdentifier, user.Id.ToString()),
                 new Claim(ClaimTypes.Email, user.Email),
                 new Claim(ClaimTypes.Name, $"{user.FirstName} {user.LastName}"),
+                new Claim(ClaimTypes.Role, user.Role)
             };
 
             var identity = new ClaimsIdentity(claims, CookieAuthenticationDefaults.AuthenticationScheme);
